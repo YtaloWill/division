@@ -1,0 +1,27 @@
+<script>
+    var a = 0, b = 0, bMult = 0, contMult = 0;
+
+    a = prompt("First Number");
+    a = parseInt(a);
+    do{
+        b = prompt("Second Number");
+    } while (b < 1 || b > a)
+
+    b = parseInt(b);
+
+    while (bMult < a){
+        bMult += b;
+        contMult++;
+    }
+    
+    if (bMult != a){
+        bMult -= b;
+        contMult--;
+    }
+
+    a -= bMult;
+
+    document.write("<h1>Quocient" + contMult + "</h1>");
+    document.write("<h1>Remainder:" + a + "</h1>");
+
+</script>
